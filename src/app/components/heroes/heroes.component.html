@@ -3,8 +3,11 @@
 
 <div class="card-columns">
 
-  <app-heroe-tarjeta [heroe]="heroe" [index]="i"
-                     *ngFor="let heroe of heroes; let i = index">
+  <app-heroe-tarjeta
+    (heroeSeleccionado)="verHeroe( $event )"
+    [heroe]="heroe"
+    [index]="i"
+    *ngFor="let heroe of heroes; let i = index">
   </app-heroe-tarjeta>
 
 </div>
